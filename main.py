@@ -1,4 +1,4 @@
-nome = "Eduardo"
-sobrenome = "Barreto"
-
-print(f"Meu nome é {nome} {sobrenome}.")
+contador = 1
+while contador <= 10:
+    print("Problema")
+    contador += 1
