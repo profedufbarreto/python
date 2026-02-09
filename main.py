@@ -1,5 +1,7 @@
-nome = "Eduardo"
-idade = 38
-cidade = "Montenegro"
+a = 3
+b = 2
+soma = a + b
+subt = a - b
 
-print(nome, idade, cidade)
+print(soma)
+print(subt)
