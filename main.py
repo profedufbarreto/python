@@ -1,7 +1,6 @@
-a = 3
-b = 2
-soma = a + b
-subt = a - b
+idade = 38
 
-print(soma)
-print(subt)
+if idade >= 18:
+    print("Maior de idade!")
+else:
+    print("Menor de idade!")
