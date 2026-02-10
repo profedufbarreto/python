@@ -1,4 +1,7 @@
-palavras = ["casa", "carro", "computador", "mouse", "hd", "avião", "bicicleta", "motocicleta", "monitor"]
+def calcular_media(numeros):
+    soma = sum(numeros)
+    quantidade = len(numeros)
+    return soma / quantidade
 
-for i in range(0, 9, 2):
-    print(palavras[i])
+lista = [10, 20, 30, 40]
+print(calcular_media(lista))
