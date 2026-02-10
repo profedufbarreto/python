@@ -1,7 +1,7 @@
-def calcular_media(numeros):
-    soma = sum(numeros)
-    quantidade = len(numeros)
-    return soma / quantidade
+numeros = []
 
-lista = [10, 20, 30, 40]
-print(calcular_media(lista))
+for i in range(5):
+    valor = int(input(f"Digite o número {i+1}: "))
+    numeros.append(valor)
+    
+print("Lista final: ", numeros)
