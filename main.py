@@ -1,6 +1,5 @@
-def soma(a, b):
-    resultado = a + b
-    return resultado
+numeros = []
+
 
 def subt(a, b):
     resultado = a - b 
@@ -25,4 +24,10 @@ print(soma(5, 3))
 print(subt(8, 2))
 print(mult(8, 9))
 print(div(18, 9))
+
+for i in range(5):
+    valor = int(input(f"Digite o número {i+1}: "))
+    numeros.append(valor)
     
+print("Lista final: ", numeros)
+
