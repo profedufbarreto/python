@@ -1,15 +1,4 @@
-def saudacao(nome, idade, cidade):
-    print(f"Olá {nome}!")
-    print(f"Você tem {idade} e mora em {cidade}!")
-    
-    
-saudacao.nome = input("Digite seu nome: ")
-saudacao.idade = input("Digite sua idade: ")
-saudacao.cidade = input("Digite sua cidade: ")
+numeros = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
 
-print(saudacao.nome, saudacao.idade, saudacao.cidade)
-print(saudacao.nome)
-print(saudacao.idade)
-print(saudacao.cidade)
-
-
+for i in range(0+1, 20, 2):
+    print(numeros[i])
