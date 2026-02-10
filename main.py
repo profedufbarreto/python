@@ -1,5 +1,5 @@
-while True:
-    senha = input("Digite a senha: ")
-    if senha == "123":
-        print("Acesso liberado!")
-        break;
+frutas = ["Maçã", "Banana", "Mamão", "Melancia", "Uva"]
+
+
+for i in range(0, len(frutas)):
+    print(frutas[i])
