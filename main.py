@@ -1,9 +1,5 @@
-user = ""
-senha = ""
-
-while user != "dudu":
-    user = input("Digite seu user: ")
-while senha != "123":
-    senha = input("Digite sua senha: ")
-    
-print("Acesso liberado!")
+while True:
+    senha = input("Digite a senha: ")
+    if senha == "123":
+        print("Acesso liberado!")
+        break;
