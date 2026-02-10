@@ -1,4 +1,22 @@
-cidades = ["Novo Hamburgo", "Portão", "Capela de Santana", "Montenegro"]
+def soma(a, b):
+    resultado = a + b
+    return resultado
 
-for cidade in cidades:
-    print(cidade)
+def subt(a, b):
+    resultado = a - b 
+    return resultado
+
+def mult(a, b):
+    resultado = a * b
+    return resultado
+
+def div(a, b):
+    resultado = a / b
+    return resultado
+
+
+print(soma(5, 3))
+print(subt(8, 2))
+print(mult(8, 9))
+print(div(18, 9))
+    
