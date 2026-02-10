@@ -1,5 +1,4 @@
-frutas = ["Maçã", "Banana", "Mamão", "Melancia", "Uva"]
+cidades = ["Novo Hamburgo", "Portão", "Capela de Santana", "Montenegro"]
 
-
-for i in range(0, len(frutas)):
-    print(frutas[i])
+for cidade in cidades:
+    print(cidade)
