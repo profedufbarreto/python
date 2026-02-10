@@ -14,6 +14,12 @@ def div(a, b):
     resultado = a / b
     return resultado
 
+print("---------- Escolha a opção ----------")
+opcao = int(input("Digite um valor para a operação correspondente: "))
+print("1 - Para soma")
+print("2 - Para subtração")
+print("3 - Para multiplicação")
+print("4 - Para divisão")
 
 print(soma(5, 3))
 print(subt(8, 2))
