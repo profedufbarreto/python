@@ -1,4 +1,9 @@
-contador = 1
-while contador <= 10:
-    print("Problema")
-    contador += 1
+user = ""
+senha = ""
+
+while user != "dudu":
+    user = input("Digite seu user: ")
+while senha != "123":
+    senha = input("Digite sua senha: ")
+    
+print("Acesso liberado!")
