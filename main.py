@@ -1,7 +1,9 @@
-numeros = []
+num = int(input("Digite um número: "))
 
-for i in range(5):
-    valor = int(input(f"Digite o número {i+1}: "))
-    numeros.append(valor)
-    
-print("Lista final: ", numeros)
+if num < 0:
+    print("Digitação inválida!")
+else:
+    if num % 2 == 0:
+        print("Número par!")
+    else:
+        print("Número ímpar!")
