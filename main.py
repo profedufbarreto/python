@@ -1,9 +1,6 @@
-num = int(input("Digite um número: "))
+nome = "Eduardo"
+texto = "Eu gosto de tomar café todos os dias"
 
-if num < 0:
-    print("Digitação inválida!")
-else:
-    if num % 2 == 0:
-        print("Número par!")
-    else:
-        print("Número ímpar!")
+print(nome.upper())
+print(nome.lower())
+print(texto.replace("café", "mate"))
