@@ -16,6 +16,9 @@ class ProdutoAlimenticio(Produto):
         print(f"{self.nome}, R${self.valor}, validade: {self.validade}")
         print("Produto alimenticio cadastrado com sucesso!")
 
-p1 = ProdutoAlimenticio("Arroz", 5.59, "12/04/2026")
-p1.cadastrar()    
+p1 = Produto("Notebook", 3499.90)
+p1.cadastrar()
+
+p2 = ProdutoAlimenticio("Arroz", 5.59, "12/04/2026")
+p2.cadastrar()    
     
