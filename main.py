@@ -17,10 +17,15 @@ class ProdutoAlimenticio(Produto):
         print("Produto alimenticio cadastrado com sucesso!")
 
 
+tipo = input("Digite o tipo de produto (Comum/Alimenticio): ")
+
 nome = input("Digite o nome do produto: ")
 valor = float(input("Digite o valor do produto: "))
-validade = input("Digite a validade do produto: ")
 
-
-p1 = ProdutoAlimenticio(nome, valor, validade)
-p1.cadastrar()
+if tipo.lower() == "alimenticio":
+    validade = input("Digite a validade do produto: ")
+    produto = ProdutoAlimenticio(nome, valor, validade)
+else:
+    produto = Produto(nome, valor)
+    
+produto.cadastrar()
