@@ -7,7 +7,15 @@ class Produto:
         print(f"{self.nome}, R${self.valor}")
         print("Cadastrado com sucesso!")
         
+class ProdutoAlimenticio(Produto):
+    def __init__(self, nome, valor, validade):
+        super().__init__(nome, valor)
+        self.validade = validade
+        
+    def cadastrar(self):
+        print(f"{self.nome}, R${self.valor}, validade: {self.validade}")
+        print("Produto alimenticio cadastrado com sucesso!")
 
-p1 = Produto("Arroz", 5.59)
+p1 = ProdutoAlimenticio("Arroz", 5.59, "12/04/2026")
 p1.cadastrar()    
     
