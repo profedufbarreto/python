@@ -19,8 +19,8 @@ class ProdutoAlimenticio(Produto):
 
 nome = input("Digite o nome do produto: ")
 valor = float(input("Digite o valor do produto: "))
+validade = input("Digite a validade do produto: ")
 
 
-
-p1 = Produto(nome, valor)
+p1 = ProdutoAlimenticio(nome, valor, validade)
 p1.cadastrar()
