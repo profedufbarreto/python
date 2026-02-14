@@ -1,11 +1,13 @@
-class Carro:
-    def __init__(self, modelo, ano, cor):
-        self.modelo = modelo
-        self.ano = ano
-        self.cor = cor
+class Produto:
+    def __init__(self, nome, valor):
+        self.nome = nome
+        self.valor = valor
         
     def cadastrar(self):
-        print(f"O {self.modelo} de {self.ano} e na cor {self.cor}foi cadastrado com sucesso!")
+        print(f"{self.nome}, R${self.valor}")
+        print("Cadastrado com sucesso!")
         
-car1 = Carro("Corcel", 73, "Vermelha")
-car1.cadastrar()
+
+p1 = Produto("Arroz", 5.59)
+p1.cadastrar()    
+    
