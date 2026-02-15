@@ -16,5 +16,17 @@ class Aluno(Pessoa):
         print(f"{self.nome} nascido em: {self.dataDeNascimento} da turma {self.turma}.")
         print("Você foi cadastrado com sucesso!")
         
-p1 = Aluno("Eduardo", "11/07/1987", "321")
-p1.cadastrar()
+class Professor(Pessoa):
+    def __init__(self, nome, dataDeNascimento, disciplina):
+        super().__init__(nome, dataDeNascimento)
+        self.disciplina = disciplina
+        
+    def cadastrar(self):
+        print(f"{self.nome} nascido em: {self.dataDeNascimento} lecionando {self.disciplina}.")
+        print("Cadastro realizado com sucesso!")
+        
+print("Escolha a Opção desejada para cadastro: ")
+opcao = input("1 - Professor. 2 - Aluno")
+
+if opcao == 1:
+    
