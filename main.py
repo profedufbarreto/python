@@ -13,7 +13,7 @@ class Aluno(Pessoa):
         self.turma = turma
         
     def cadastrar(self):
-        print(f"{self.nome} nascido em: {self.dataDeNascimento} da turma {self.turma}.")
+        print(f"{self.nome} nascido em: {self.dataDeNascimento} da turma {self.turma}")
         print("Você foi cadastrado com sucesso!")
         
 class Professor(Pessoa):
@@ -22,11 +22,22 @@ class Professor(Pessoa):
         self.disciplina = disciplina
         
     def cadastrar(self):
-        print(f"{self.nome} nascido em: {self.dataDeNascimento} lecionando {self.disciplina}.")
+        print(f"{self.nome} nascido em: {self.dataDeNascimento}, leciona {self.disciplina}")
         print("Cadastro realizado com sucesso!")
         
-print("Escolha a Opção desejada para cadastro: ")
-opcao = input("1 - Professor. 2 - Aluno")
+print("Escolha a opção desejada para cadastro: ")
+opcao = input("1 - Professor | 2 - Aluno: ")
 
-if opcao == 1:
+nome = input("Digite o nome: ")
+dataDeNascimento = input("Digite a data de nascimento: ")
+
+if opcao == "1":
+    disciplina = input("Digite a disciplina: ")
+    pessoa = Professor(nome, dataDeNascimento, disciplina)
+elif opcao == "2":
+    turma = input("Digite a turma: ")
+    pessoa = Aluno(nome, dataDeNascimento, turma)
+else:
+    pessoa = Pessoa(nome, dataDeNascimento)
     
+pessoa.cadastrar()
