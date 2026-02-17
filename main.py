@@ -1,10 +1,18 @@
-soma = 0
+nomes = ["Eduardo", "Brian", "Gabriel"]
+encontrado = False
+ 
+nomeProcurado = input("Digite o nome para verificar: ")
 
-num = int(input("Digite um número (0 para sair): "))
+for i in range(0, 2):
+    if nomeProcurado == nomes[i]:
+        encontrado = True
+        break
+    
+if encontrado == True:
+    print(f"{nomeProcurado} está na lista!")
+else:
+    print(f"{nomeProcurado} não está na lista!")
 
-while num != 0:
-    if num % 2 == 0:
-        soma = soma + num
-    num = int(input("Digite um número (0 para sair): "))
 
-print(f"A soma dos números pares é {soma}")
+        
+    

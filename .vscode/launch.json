@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/profedu_fbarreto/Documents/dev/profefbarreto/python",
+      "program": "/Users/profedu_fbarreto/Documents/dev/profefbarreto/python/build/Debug/outDebug"
+    }
+  ]
+}
