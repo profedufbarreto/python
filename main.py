@@ -1,16 +1,27 @@
 import tkinter as tk
 
-def say_hello():
-    print("Olá! Fazendo teste!")
+def verificar():
+    idade_digitada = entrada_idade.get()
     
-window = tk.Tk()
-window.title("Meu primeiro APP")
-window.geometry("300x200")
+    idade = int(idade_digitada)
+    
+    if idade >= 18:
+        resultado.config(text="Status: Pode beber", fg="green")
+    else:
+        resultado.config(text="Status: Não pode beber!", fg="red")
+        
+app = tk.Tk()
+app.title("Verificador de idade")
+app.geometry("300x200")
 
-label = tk.Label(window, text="Bem-vindo ao Tkinter!")
-label.pack(pady=10)
+tk.Label(app, text="Digite sua idade: ").pack(pady=10)
 
-button = tk.Button(window, text="Clique aqui", command=say_hello)
-button.pack(pady=10)
+entrada_idade = tk.Entry(app)
+entrada_idade.pack(pady=5)
 
-window.mainloop()
+tk.Button(app, text="Verificar", command=verificar).pack(pady=10)
+
+resultado = tk.Label(app, text="Status: Esperando..")
+resultado.pack(pady=20)
+
+app.mainloop()
