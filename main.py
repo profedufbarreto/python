@@ -1,27 +1,21 @@
-import tkinter as tk
+def calcular_media(notas):
+    return sum(notas) / len(notas)
 
-def verificar():
-    idade_digitada = entrada_idade.get()
-    
-    idade = int(idade_digitada)
-    
-    if idade >= 18:
-        resultado.config(text="Status: Pode beber", fg="green")
+def classificar(media):
+    if media >= 7:
+        return "Aprovado"
+    elif media >= 5:
+        return "Recuperação"
     else:
-        resultado.config(text="Status: Não pode beber!", fg="red")
-        
-app = tk.Tk()
-app.title("Verificador de idade")
-app.geometry("300x200")
+        return "Reprovado"
+    
+notas = []
 
-tk.Label(app, text="Digite sua idade: ").pack(pady=10)
-
-entrada_idade = tk.Entry(app)
-entrada_idade.pack(pady=5)
-
-tk.Button(app, text="Verificar", command=verificar).pack(pady=10)
-
-resultado = tk.Label(app, text="Status: Esperando..")
-resultado.pack(pady=20)
-
-app.mainloop()
+for i in range(3):
+    valor = float(input(f"Digite a nota {i + 1}: "))
+    notas.append(valor)
+    
+media = calcular_media(notas)
+print(f"Notas: {notas}")
+print(f"Média: {media:.2f}")
+print(f"Situação: {classificar(media)}")
