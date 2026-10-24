@@ -1,24 +1,31 @@
-class Pessoa:
-    def __init__(self, nome, idade, altura):
-        self.nome = nome
-        self.idade = idade
-        self.altura = altura
-        
-    def apresentar(self):
-        print(f"\nOlá, meu nome é {self.nome} e tenho {self.idade} anos.")
-        print(f"Minha altura é de {self.altura}m.")
-        
-    def e_maior_de_idade(self):
-        return self.idade >= 18
+class Funcionario:
+    def __init__(self, nome, salario):
+        self.nome = nome 
+        self.salario = salario
     
-nome = input("Digite seu nome: ")
-idade = int(input("Digite sua idade: "))
-altura = float(input("Digite sua altura: "))
+    def info(self):
+        return f"{self.nome} | Salário: R${self.salario:.2f}"
+    
+class Gerente(Funcionario):
+    def __init__(self, nome, salario, bonus):
+        super().__init__(nome, salario)
+        self.bonus = bonus
+        
+    def info(self):
+        return f"{super().info} | Bônus: R${self.bonus:.2f}"
+    
+class Desenvolvedor(Funcionario):
+    def __init__(self, nome, salario, linguagem):
+        super().__init__(nome, salario)
+        self.linguagem = linguagem
+        
+    def info(self):
+        return f"{super().info()} | Linguagem: {self.linguagem}"
+            
+f = Funcionario("Ana", 3000)
+g = Gerente("Carlos", 800, 1500)
+d = Desenvolvedor("Lucas", 6000, "Python")
 
-p = Pessoa(nome, idade, altura)
-p.apresentar()
-
-if p.e_maior_de_idade():
-    print("Você é maior de idade.")
-else:
-    print("Você é menor de idade.")
+print(f.info())
+print(g.info())
+print(d.info())    
