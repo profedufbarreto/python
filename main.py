@@ -1,11 +1,24 @@
 class Pessoa:
-    def __init__(self, nome, idade):
+    def __init__(self, nome, idade, altura):
         self.nome = nome
         self.idade = idade
-    
-    def apresentar(self):
-        print(f"Olá, meu nome é {self.nome} e tenho {self.idade} anos.")
+        self.altura = altura
         
-p1 = Pessoa("João", 25)
+    def apresentar(self):
+        print(f"\nOlá, meu nome é {self.nome} e tenho {self.idade} anos.")
+        print(f"Minha altura é de {self.altura}m.")
+        
+    def e_maior_de_idade(self):
+        return self.idade >= 18
+    
+nome = input("Digite seu nome: ")
+idade = int(input("Digite sua idade: "))
+altura = float(input("Digite sua altura: "))
 
-p1.apresentar()        
+p = Pessoa(nome, idade, altura)
+p.apresentar()
+
+if p.e_maior_de_idade():
+    print("Você é maior de idade.")
+else:
+    print("Você é menor de idade.")
