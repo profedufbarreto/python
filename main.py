@@ -1,21 +1,30 @@
-def calcular_media(notas):
-    return sum(notas) / len(notas)
-
-def classificar(media):
-    if media >= 7:
-        return "Aprovado"
-    elif media >= 5:
-        return "Recuperação"
-    else:
-        return "Reprovado"
+class Pessoa:
+    def __init__(self, nome):
+        self.nome = nome 
+        
+    def apresentar(self):
+        return f"\nMeu nome é {self.nome}!"
     
-notas = []
-
-for i in range(3):
-    valor = float(input(f"Digite a nota {i + 1}: "))
-    notas.append(valor)
+class Aluno(Pessoa):
+    def __init__(self, nome, turma):
+        super().__init__(nome)
+        self.turma = turma
+        
+    def info(self):
+        return f"{super().apresentar()} | Turma: {self.turma}"
     
-media = calcular_media(notas)
-print(f"Notas: {notas}")
-print(f"Média: {media:.2f}")
-print(f"Situação: {classificar(media)}")
+class Professor(Pessoa):
+    def __init__(self, nome, uc, ch):
+        super().__init__(nome)
+        self.uc = uc 
+        self.ch = ch 
+    
+    def info(self):
+        return f"{super().apresentar()} | UC: {self.uc} | CH: {self.ch}h"
+    
+
+a = Aluno("Eduardo", "SNH8792")
+p = Professor("Gerson", "Interface Gráfica", 96)
+
+print(a.info())
+print(p.info())
